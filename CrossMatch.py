@@ -136,9 +136,9 @@ def MatchRADEC(RA_candidates,DEC_candidates, RA_subjects, DEC_subjects, target_I
     print(cross_match,'total matching IDs')
 
 #use functions and change filenames
-RAsubjects, DECsubjects = FindSubjectCoords(r'Subjects.csv')
-targetIDs = FindTargetIDs(r'CandidateIDs.csv')
-RAcandidates, DECcandidates = FindCandidateCoords(r'CandidateFile.csv', targetIDs)
+RAsubjects, DECsubjects = FindSubjectCoords(r'Subjects.csv') # Zooniverse subjects file
+targetIDs = FindTargetIDs(r'CandidateIDs.csv') # list of the subject IDs to compare, can comment out if not needed
+RAcandidates, DECcandidates = FindCandidateCoords(r'TargetFile.csv', targetIDs) # csv of all target (RA, DEC, target type), can delete targetIDs if needed
 
 print(len(RAsubjects),'total subjects present')
 print(len(RAcandidates),'total candidates present')

@@ -9,18 +9,15 @@ Returns target type CSVs with movement ratio, RA, DEC, and WiseView link titled 
 """
 
 import numpy as np
-import pandas as pd
-import math
 import re
 import csv
-import copy
 
 #load in coordinates, classifications, and targets
 ClassificationsFile = r'Classifications.csv'
 TargetFile = r'Targets.csv'
 coord_data = np.loadtxt(TargetFile,delimiter=',',usecols=(0,1)).astype(float)
 
-Types = ['1','2','4','8','16']#define values for type of target, here 2^(0,1,2,3,4,5) used
+Types = ['1','2','4','8','16']# define values for type of target, here 2^(0,1,2,3,4,5) used
 acceptance_ratio = 0.0 # define minimum movement ratio for a target to be considered
 
 #Find RA and DEC of desired subjects
