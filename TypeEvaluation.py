@@ -10,7 +10,6 @@ Can also specify specific subject IDs that should not be counted in results
 """
 
 import numpy as np
-import pandas as pd
 import math
 import re
 import csv
